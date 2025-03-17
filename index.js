@@ -17,8 +17,8 @@ const github = require('@actions/github');
         const { owner: currentOwner, repo: currentRepo } = context.repo
 
         // Owner of Repo and Repo itself to get Tag from, as input or from context
-        const assetOwner = core.getInput('owner', { required: false }) || currentOwner
-        const assetRepo = core.getInput('repo', { required: false }) || currentRepo
+        const assetOwner = core.getInput('asset_owner', { required: false }) || currentOwner
+        const assetRepo = core.getInput('asset_repo', { required: false }) || currentRepo
         const assetTag = core.getInput('asset_tag', { required: false } || 'Latest')
 
         // Getting the uploadUrl of the Release with the Latest tag
